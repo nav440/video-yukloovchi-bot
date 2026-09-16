@@ -44,7 +44,10 @@ from telegram.ext import (
 )
 
 # ============ SOZLAMALAR ============
-BOT_TOKEN = "SIZNING_BOT_TOKENINGIZ_BU_YERGA"  # @BotFather dan olingan token
+# Railway'da: Variables bo'limiga BOT_TOKEN nomi bilan tokeningizni qo'shing.
+# Kompyuteringizda lokal ishga tushirsangiz ham, muhit o'zgaruvchisi orqali
+# yoki quyidagi "yoki" qismidagi qatorga to'g'ridan-to'g'ri yozib qo'yishingiz mumkin.
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "SIZNING_BOT_TOKENINGIZ_BU_YERGA")
 DOWNLOAD_DIR = "downloads"
 MAX_FILE_SIZE_MB = 50  # Telegram bot API cheklovi (oddiy bot uchun ~50MB)
 RETRY_COUNT = 3        # Muvaffaqiyatsiz bo'lsa necha marta qayta urinish
